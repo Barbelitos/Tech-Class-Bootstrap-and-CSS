@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100%;
+    background-image: linear-gradient(rgba(255,255,255, 0.6), rgba(255, 255, 255, 0.8)), url(/Images/Lisboa.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.homecontainer {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0, 0, 0, 0.5)), url(/Images/DavidHel.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+
+/* NavBar */
+
+#navmenu {
+    height: fit-content;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0,0,0, 0);
+}
+
+#navmenu a {
+    margin-right: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+#navmenu a:hover {
+    border-bottom: 3px solid white;
+}
+
+.active {
+    border-bottom: 3px solid white;
+}
+
+/* Breadcrumb */
+
+.breadcrumb {
+    float: right;
+    margin-top: 60px;
+    margin-right: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5)
+}
+
+.breadcrumb-item {
+    padding: 10px;
+}
+
+/* Name and Social Media */
+
+.hometitle {
+    width: 100%;
+    margin-top: 40vh;
+    align-items: center;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.74);
+    
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 40%;
+    margin: auto;
+}
+
+.sociallink {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.74);
+    transition: .3s ease-in-out;
+}
+
+.sociallink:hover {
+    color:rgba(255, 255, 255, 0.74);
+    transform: scale(1.2);
+    
+}
+
+/* Home Page Media Queries */
+
+@media only screen and (max-width: 900px) {
+    .socialmedia {
+        width: 80%;
+    }
+
+    .sociallink:hover {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #navmenu {
+        background-color: rgba(0,0,0, 0.8);
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .socialmedia {
+        width: 20%;
+    }
+}
+
+
+/* About Page */
+
+.jumbotron {
+    margin: 10em auto;
+    width: 80%;
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5)
+}
+
+.jumbocontent {
+    display: flex;
+}
+
+.jumbotext {
+    margin-right: 12px;
+}
+
+#profilepic {
+    border-radius: 15px;
+    width: 40%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5)
+}
+
+/* About Page Media Queries */
+
+@media only screen and (max-width: 900px) {
+    .jumbotron {
+        width: 90%;
+    }
+
+    .jumbocontent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .jumbotext {
+        margin-right: 0;
+    }
+
+    #profilepic {
+        width: 100%;
+    }
+}
+
+
+/* Skills Page */
+
+.skillcontainer {
+    list-style: none;
+    font-size: 1.5em;
+    padding: 0;
+}
+
+.skillcontainer li {
+    margin-top: 1em;
+}
+
+.skill {
+    width: 100%;
+}
+
+span.badge {
+    border-radius: 20px;
+    font-size: .6em;
+}
+
+
+/* Education Page */
+
+#accordion {
+    width: 100%;
+    margin: auto;
+}
+
+#accordion .card-header {
+    padding: 0;
+}
+
+#accordion button {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    font-weight: 600;
+}
+
+
+/* Projects Page */
+
+.projectcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    gap: 1em;
+}
+
+.projectcontainer .projectcard {
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.projectcard img {
+    border-radius: 10px 10px 0 0;
+    height: 8rem;
+}
+
+.projectcard:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.projectcard .project-body {
+    border-radius: 0 0 10px 10px;
+}
+
+.modal-content {
+    border-radius: 10px !important;
+}
+
+.modal-content a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.modal-content a:hover {
+    color: black;
+}
+
+/* Projects Page Media Queries */
+
+@media only screen and (max-width: 800px) {
+    .projectcontainer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .projectcontainer .projectcard {
+        margin: 1em auto;
+    }
+}
+
+
+/* Resume Page */
+
+#cvtype a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+
+/* Gallery Page */
+
+/* Picture Gallery */
+#jumbogallery h4 {
+    border-radius: 20px;
+    padding: .3em;
+    width: 30%;
+    text-align: center;
+}
+
+.carousel {
+    border-radius: 25px;
+    width: 90%;
+    margin: auto;
+}
+
+.carousel-item {
+    height: 700px;
+}
+
+.carousel-item img {
+    height: 100%;
+    border-radius: 25px;
+}
+
+
+/* Video Gallery */
+.videocontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.videocontainer .videoframe {
+    width: 30em;
+    margin-bottom: 1.2em;
+    border: 0;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+
+/* Gallery Page Media Queries */
+
+@media only screen and (max-width: 700px) {
+    #jumbogallery h4 {
+        width: 70%;
+    }
+
+    .carousel-item {
+        height: 250px;
+    }
+
+    .videocontainer .videoframe {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-Width: 700px) and (max-width: 900px) {
+    .carousel-item {
+        height: 400px;
+    }
+}
+
+
+@media only screen and (min-width: 1600px) {
+    .carousel-item {
+        height: 1200px;
+    }
+}
+
+
+/* References Page */
+
+.reference-card {
+    display: flex;
+    border-radius: 15px !important;
+    margin: 2em auto;
+}
+
+.reference-image {
+    width: 25% !important;
+}
+
+.reference-card img {
+    margin: 2em auto;
+}
+
+
+.reference-card .card-body {
+    position: relative;
+    
+}
+
+.reference-text {
+    font-size: 1.2em;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+}
+
+/* References Page Media Queries */
+
+@media only screen and (max-width: 800px) {
+    .reference-card {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .reference-image {
+        text-align: center;
+        width: 80% !important;
+        margin: auto !important;
+    }
+
+    .reference-text {
+        font-size: 1em;
+        transform: none;
+        position: static;
+    }
+
+    #opposite-card {
+        flex-direction: column-reverse !important;
+    }
+}
+
+
+/* Contact Page */
+
+form h6 {
+    width: 8em;
+    border-radius: 10px;
+    padding: .2em .2em .2em .5em;
+}
+
+.wrapper {
+    position: relative;
+    margin: auto;
+    width: 70%;
+    height: 70px;
+}
+
+.alert {
+    display: none;
+    position: absolute !important;
+    width:100%;
+    margin: auto;
+}
+
+.showalert {
+    display: block;
+}
+
+.mediacontacts {
+    display: flex;
+    justify-content: flex-end;
+    gap: .6em;
+}
+
+.mediacontacts a {
+    color: #ffbb33;
+    transition: all .3s ease-in-out
+}
+
+.mediacontacts a:hover {
+    color:black;
+}
+
+/* Contact Page Media Queries */
+
+@media only screen and (max-width: 800px) {
+    #contactform {
+        width: 100% !important;
+    }
+
+    .buttons {
+        text-align: center;
+    }
+
+    .mediacontacts {
+        justify-content: center;
+    }
+
+    .mediacontacts a {
+        margin: auto .8em;
+    }
+
+    .mediacontacts a:hover {
+        color: #ffbb33;
+    }
+}
+
+
+
